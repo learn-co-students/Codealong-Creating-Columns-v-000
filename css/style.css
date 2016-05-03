@@ -80,9 +80,9 @@ img, video, audio {
 /*////////LAYOUT///////*/
 
 * {
-  -webkit-box-size: border-box;
-  -moz-box-size: border-box;
-  box-size: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -91,7 +91,7 @@ img, video, audio {
 }
 
 .col-1 {
-  flaot: left;
+  float: left;
   width: 32%;
   background: #ccc;
 }
@@ -125,13 +125,6 @@ img, video, audio {
 
 /*////////SECTIONS///////*/
 
-section {
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-/*////////SECTIONS///////*/
-
 header {
   position: fixed;
   top: 0;
@@ -140,6 +133,13 @@ header {
   background: #fff;
   z-index: 1;
 }
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*////////SOCIAL///////*/
 
 #social {
   position: fixed;
