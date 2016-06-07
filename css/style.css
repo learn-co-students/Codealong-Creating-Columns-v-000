@@ -42,7 +42,11 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: white;
+<<<<<<< HEAD
+  background: aqua;
+=======
+  background: aqua;
+>>>>>>> 5ad4b0ebbeb54ccf6f3aac0db41dd9382bd280d4
 }
 
 /* Descendent Selector */
@@ -70,6 +74,7 @@ figcaption {
 #details a:active {
   color: red;
 }
+<<<<<<< HEAD
 
 /* -------- MEDIA --------- */
 
@@ -169,3 +174,5 @@ section {
 
 
 
+=======
+>>>>>>> 5ad4b0ebbeb54ccf6f3aac0db41dd9382bd280d4
