@@ -90,7 +90,7 @@ img, video, audio {
   margin: 0 auto;
 }
 
-.col -1 {
+.col-1 {
   float: left;
   width: 32%;
   background: #ccc;
