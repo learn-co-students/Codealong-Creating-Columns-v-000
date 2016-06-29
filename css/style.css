@@ -55,7 +55,7 @@ figcaption {
   font-family: 'Elsie Swash Caps', cursive;
 }
 
-/* Psuedo Selector */
+/* Psuedo Selector      */
 
 #details a:link, #details a:visited {
   color: black;
