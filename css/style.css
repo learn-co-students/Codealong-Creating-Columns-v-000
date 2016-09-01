@@ -112,7 +112,7 @@ img, video, audio {
   margin-left: 0%;
 }
 
-.clearfix: after {
+.clearfix:after {
   content: ".";
   display: block;
   clear: both;
