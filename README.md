@@ -1,4 +1,4 @@
-# CSS Columns Along Exercise
+  # CSS Columns Along Exercise
 
 ## Overview
 
@@ -16,4 +16,3 @@ In this code along exercise we will add column structure to our page layouts.
 <iframe width="100%" height="720" src="//www.youtube.com/embed/zZpAqtEXse0?rel=0&amp;controls=1&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/Codealong-Creating-Columns' title='Codealong Creating Columns'>Codealong Creating Columns</a> on Learn.co and start learning to code for free.</p>
-
