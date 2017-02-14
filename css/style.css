@@ -42,7 +42,6 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
 }
 
 /* Descendent Selector */
@@ -69,4 +68,93 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/*////// MEDIA //////*/
+
+img, video, audio {
+  max-width:100%; /* allows img, video & audio to be fluid in their sizing */
+                  /* to be always 100% within the confines of their parent container */
+                  /* which in this case is the column they're in */
+}
+
+/*////// LAYOUT //////*/
+
+* { /* universal selector */
+  /* includes padding and border into the width on all browsers */
+  -webkit-box-sizing: border-box; /* older versions of safari */
+  -moz-box-sizing: border-box; /* older versions of firefox */
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; /* no margin top & bottom, margin lef & right */
+}
+
+.col-1 { /* will span one third of the space */
+  float: left;
+  width: 32%;
+  background: #ccc;
+}
+
+.col-2 { /* will span two thirds of the space */
+  float: left;
+  width: 66%;
+  background: #ccc;
+}
+
+.col-3 { /* by default will span all of the space */
+  background: #ccc;
+}
+
+.clearfix:after { /* prevent floating childrens' parents from collapsing */
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}  
+
+
+[class*="col-"] { /* attribute selector */
+  margin-left: 2%; /* apply to any class containing characters “col-“ */
+}  
+
+.first {
+  margin-left: 0%;
+}
+
+/*////// SECTION //////*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff; /* white */
+  z-index: 1;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*////// SEOCIAL //////*/
+
+#social { /* selector */
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1; /* always be on top of everything else */
+}
+
+#social a { /* everything associated with the #social selector */
+  display: block; /* stack vertically */
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
