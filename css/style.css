@@ -70,3 +70,97 @@ figcaption {
 #details a:active {
   color: red;
 }
+
+/*MEDIA*/
+
+/*makes all media stay within the element they are in by setting to max 100% of element*/
+img, video, audio {
+    max-width: 100%
+}
+
+/*LAYOUT*/
+
+* {
+    /* this will add the IE border box meaning it will include padding and border into the width*/
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto; /*used to center the class 'wrapper'*/
+}
+
+/* will span 1/3 of the page*/
+.col-1 {
+    float:left;
+    /*this gives column with 2% margins between each column*/
+    /*100% - 4% (we subtract 2% from each side) divide by 3*/
+    width: 32%;
+    background-color: darkgrey;
+}
+
+/* will span 2/3 of the page*/
+.col-2 {
+   float: left;
+      /*Since there is one less column we can take 2% away and add it to the double of 32%*/
+    width: 66%;
+    background-color: darkgrey;
+}
+
+/* will span 3/3 (whole) of the page*/
+  /* by default it will span 100% if the space so we do not need to state width*/
+.col-3 {
+    background-color: darkgrey;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+/* apply margins to all colums at once*/
+/* any element with a class that has the 'class' that includes 'col-, add a margin of 2% to the left*/
+[class*="col-"] {
+    margin-left: 2%
+}
+
+.first {
+    margin-left: 0%
+}
+
+/*SECTIONS*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/*SOCIAL*/
+
+#social {
+    position: fixed;
+    top: 200px;
+    right: 20px;
+    width: 40px;
+    z-index: 1
+}
+
+#social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: yellow;
+}
