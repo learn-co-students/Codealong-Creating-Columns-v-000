@@ -1,61 +1,56 @@
-@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
-@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
+/*@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);*/
 
-/* This 
-is 
-a comment! */
-
-/* CSS Syntax:
-
-selector {
-  property: value;
-  property: value;
+html, body, div, section {
+  margin: 0;
 }
 
-*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
 
-/* Type selector */
-
-p { /* select all <p> */
-  font-size: 1em; /* 16px, ?pt, 100%, 1em */
+p {
+  font-size: 1em;
   line-height: 1.5em;
+}
+
+p:last-of-type {
+  margin: 0;
+}
+
+figure {
+  /*position: relative;*/
+  line-height: 0;
+  margin: 2rem 2rem 1rem 2rem;
 }
 
 figcaption {
-  /*font-weight: normal;
-  font-size: 0.75em;
-  line-height: 1.5em;
-  font-family: Georgia, "New Times Roman", serif;*/
   font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
   color: #777;
   text-align: right;
+  /*position: absolute;*/
+  line-height: 1rem;
+  width: 100%;
 }
 
-/* Class selector (applied to as many elements as you like) */
+img, video {
+  width: 100%;
+}
 
-.milk-text { /* select elements with class="milk-text" */
+.milk-text {
   font: bold 2.6em 'Elsie Swash Caps', cursive;
   color: white;
   text-shadow: 0 2px 3px #000;
 }
 
-/* ID selector (apply to one unique element per page) */
-
-#logo { /* select elements with id="logo" */
-  background: aqua;
-}
-
-/* Descendent Selector */
-
-#logo h1 { /* selects <h1> if inside the id="logo" */
+#logo h1 {
   font-family: 'Clicker Script', cursive;
 }
 
 #logo h2 {
   font-family: 'Elsie Swash Caps', cursive;
 }
-
-/* Psuedo Selector */
 
 #details a:link, #details a:visited {
   color: black;
@@ -69,4 +64,95 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+body {
+  padding-bottom: 33vh;
+}
+
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  background: white;
+  width: 100vw;
+  z-index: 1000;
+  padding: 0 .5rem .5rem .5rem
+}
+
+header #logo,
+header nav {
+  max-width: 900px;
+  margin: auto;
+  padding: .5rem;
+}
+
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 .5rem 0 .5rem
+}
+
+section {
+  padding: 1rem;
+  margin: .5rem;
+  background: lightgrey;
+  flex-grow: 1;
+}
+
+#featured-property {
+  flex-basis: 100%;
+  margin-top: 0;
+}
+
+#promotional {
+  flex-basis: 50%;
+}
+
+#news {
+  flex-basis: 35%;
+  flex-grow: 3;
+}
+
+#details {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+#details div {
+  flex-basis: 25%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 1rem;
+  margin: .5rem;
+  background: lightgrey;
+}
+
+#social {
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 33vh;
+  right: 0px;
+  transition-duration: .5s;
+}
+
+#social a {
+  padding: .333rem;
+  background: lightgrey;
+  margin: .5rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 1200px) {
+  #social {
+    right: -15rem;
+  }
 }
