@@ -1,5 +1,5 @@
-/*@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
-@import url(http://fonts.googleapis.com/css?family=Clicker+Script);*/
+@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
 html, body, div, section {
   margin: 0;
@@ -20,7 +20,6 @@ p:last-of-type {
 }
 
 figure {
-  /*position: relative;*/
   line-height: 0;
   margin: 2rem 2rem 1rem 2rem;
 }
@@ -29,7 +28,6 @@ figcaption {
   font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
   color: #777;
   text-align: right;
-  /*position: absolute;*/
   line-height: 1rem;
   width: 100%;
 }
