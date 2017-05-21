@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -42,7 +42,6 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
 }
 
 /* Descendent Selector */
@@ -69,4 +68,119 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/* /////// IMG, VIDEO AND AUDIO FORMATING ////*/
+img, video, audio { /* this will keep img within container */
+  max-width: 100%;
+}
+
+/* /////// LAYOUT ////*/
+.wrapper {
+  width:960px;
+  margin: 0 auto; /* first value: T or B, second value: L or R.*/
+}
+
+/*/// Different classes for different size columns /////*/
+
+/* 3 column structure */
+
+.col-1 { /* set to 'float' for side-by-side */
+  float: left;
+        /* I want 2% margin dividing each column
+           so if I have three columns, there will
+           be two margins (one between 1 and 2,
+           and one between 2 and 3).  So if the
+           page is 100%, and I subtract 2% for each
+           margin (2% + 2margins = 4%).  I have
+           96% of the page.  Now I divide that by
+           the 3 columns, and each column will take
+           up 32%. */
+  width: 32%;
+  background: #ccc;
+
+}
+
+.col-2 {
+  float: left;
+  width: 66%; /* we are absorbing the 2% (1 margin),
+                 so it isn't 64%, but rather 66%. */
+  background: #ccc;
+
+}
+
+.col-3 {
+  background: #ccc;
+}
+
+[class*="col-"] {
+  margin-left: 2%;
+  }
+          /* attribute selector.  "Any element with a class
+          that somewhere inside the class name it has a
+          col-, we will give it a margin of 2%."   */
+
+.first {  /* we apply this class to columns that we do not
+             want to have a margin-left.  Namely, the column
+             of featured property and promotional. */
+  margin-left: 0%;
+}
+
+/* when ever we have children element that are floating
+   we have a problem with the parent container colapsing.
+   So we are going to set up a .clearfix. */
+
+   .clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     height: 0;
+     line-height: 0;
+   }
+
+   /* ///////STYLE SECTIONS TO GIVE THEM SPACE ////*/
+header {
+  position:  fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+  section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* however once we add some padding to our sections, the
+  added px causes our spacing to be out of wack. Because
+  we are using the WC3 model which does not include padding.
+  So we can set the box-setting tribute to border-box, and this
+  will include padding and border*/
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+/*///Social Media Sticky's ///*/
+/* we want our newly added social stickers to
+   both stack and scroll with the page. */
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
