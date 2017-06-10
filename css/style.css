@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+
 }
 
 /* Descendent Selector */
@@ -69,4 +69,90 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/* /////// MEDIA /////// */
+
+img, video, audio { /* media is 100% within confines; fluid */
+  max-width: 100%;
+}
+
+/* /////// LAYOUT /////// */
+
+* { /* set the box model so that the padding set in SECTIONS works */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px; /* width of the site layout. if you change this, the content should size accordingly */
+  margin: 0 auto;
+}
+
+.col-1 { /* spans 1/3 of the space */
+  float: left; /* need to float so they can be side by side */
+  width: 32%; /* width = (100% - (2% * col_num))/num_col */
+  background: #ccc;
+}
+
+.col-2 { /* spans 2/3 of the space */
+  float: left;
+  width: 66%; /*here you add back 2% margin bc only 2 cols */
+  background: #ccc;
+}
+
+.col-3 { /* spans all of the space */
+  /* don't need to specify the width bc it's a block-level element */
+  background: #ccc;
+}
+
+.clearfix:after { /* need this so that wrapper class doesn't collapse */
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+[class*="col-"] { /*use attribute selector to find anything with a class containing "col-" */
+  margin-left: 2%;
+}
+
+.first { /* no margin on the first left column */
+  margin-left: 0%;
+}
+
+/* /////// SECTIONS /////// */
+
+header {
+  position: fixed;
+  top: 0;3
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px; /* make sure to check that this doesn't break the layout */
+}
+
+/* /////// SOCIAL /////// */
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1; /* always on top */
+}
+
+#social a {
+  display: block; /* stack */
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
