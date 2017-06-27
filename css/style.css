@@ -91,21 +91,21 @@ img, video, audio {
 .col-1{
   float: left;
   width: 32%;
-  background: #eee;
+  background: #ccc;
 
 }
 
 .col-2{
   float: left;
   width: 66%;
-  background: #eee;
+  background: #ccc;
 }
 
 .col-3{
-  background: #eee;
+  background: #ccc;
 }
 
-[class*="col-"]{
+[class*="col-"] {
   margin-left: 2%;
 }
 
@@ -113,7 +113,7 @@ img, video, audio {
   margin-left: 0%;
 }
 
-clearfix::after {
+clearfix:after {
   content: ".";
   display: block;
   clear: both;
