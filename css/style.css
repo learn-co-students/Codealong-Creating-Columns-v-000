@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+
 }
 
 /* Descendent Selector */
@@ -69,4 +69,89 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/* ////////Media//////// */
+img, video, audio {
+  max-width: 100%;
+}
+
+/* ////////Layout//////// */
+
+* {
+/* Includes more into the width */
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.col-1 {
+  float: left;
+  width: 32%;
+  background-color: #ccc;
+}
+/* Takes up 2/3 of the page */
+.col-2 {
+  float: left;
+  width: 66%;
+  background-color: #ccc;
+}
+/* If no width specified, it'll take up all of the space */
+.col-3 {
+  background-color: #ccc;
+}
+/* Takes care of floating children */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/* All of class col- (regardless 1, 2, or 3) they will
+all have a margin left of 2% */
+[class*="col-"] {
+  margin-left:2%;
+}
+/* Anything that's first will not have
+margin left 0%*/
+.first {
+  margin-left: 0%;
+}
+
+/* ////////Sections//////// */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ////////Social//////// */
+
+#social {
+/* To make sure it always stays visible */
+  position: fixed;
+  top: 200px;
+  right: 30px;
+  width: 40px;
+/* Always be on top of everything else*/
+  z-index: 1;
+}
+/* Selects all links */
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
 }
