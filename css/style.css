@@ -42,7 +42,10 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
+<<<<<<< HEAD
 
+=======
+>>>>>>> columns
 }
 
 /* Descendent Selector */
@@ -71,13 +74,21 @@ figcaption {
   color: red;
 }
 
+<<<<<<< HEAD
 /*/////// MEDIA ///////*/
+=======
+/*//////// MEDIA ////////*/
+>>>>>>> columns
 
 img, video, audio {
   max-width: 100%;
 }
 
+<<<<<<< HEAD
 /*/////// LAYOUT ///////*/
+=======
+/*//////// LAYOUT ////////*/
+>>>>>>> columns
 
 * {
   -webkit-box-sizing: border-box;
@@ -87,7 +98,11 @@ img, video, audio {
 
 .wrapper {
   width: 960px;
+<<<<<<< HEAD
   margin: 0 auto;
+=======
+  margin: 0 /*top and bottom*/ auto /*left and right*/;
+>>>>>>> columns
 }
 
 .col-1 {
@@ -123,23 +138,38 @@ img, video, audio {
   margin-left: 0%;
 }
 
+<<<<<<< HEAD
 /*/////// SECTIONS ///////*/
+=======
+/*//////// SECTIONS ////////*/
+>>>>>>> columns
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+<<<<<<< HEAD
   background: #fff;
+=======
+  background: white;
+>>>>>>> columns
   z-index: 1;
 }
 
 section {
   padding: 20px;
   margin-bottom: 20px;
+<<<<<<< HEAD
 }
 
 /*/////// SOCIAL ///////*/
+=======
+
+}
+
+/*//////// SOCIAL ////////*/
+>>>>>>> columns
 
 #social {
   position: fixed;
