@@ -94,9 +94,11 @@ figcaption {
 	background: rgba(136,	183,	227,	1);
 }
 
-[class*= "col-"] {
+[class*= "col-"] /* attribute selector - this will select anything 
+with a class of column -, we're going to give it a margin on the left side */
+	{
 	margin-left: 2%;
-}
+	}
 
 
 
