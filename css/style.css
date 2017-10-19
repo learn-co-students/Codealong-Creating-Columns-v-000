@@ -77,3 +77,39 @@ figcaption {
 	margin: 0 auto;
 	background: rgba(204,	220,	226	,1);	
 }
+
+.col-1 {
+	float: left;
+	width: 32%;
+	background: rgba(206,	159,	89, 1);
+}
+
+.col-2 {
+	float: left;
+	width: 66%; 
+	background: ; 
+}
+
+.col-3 {
+	background: ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
