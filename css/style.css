@@ -100,6 +100,10 @@ with a class of column -, we're going to give it a margin on the left side */
 	margin-left: 2%;
 	}
 
+.first {
+	margin: 0%; 
+}
+
 
 
 
