@@ -87,13 +87,16 @@ figcaption {
 .col-2 {
 	float: left;
 	width: 66%; 
-	background: ; 
+	background: rgba(226, 128,	110,	1); 
 }
 
 .col-3 {
-	background: ;
+	background: rgba(136,	183,	227,	1);
 }
 
+[class*= "col-"] {
+	margin-left: 2%;
+}
 
 
 
