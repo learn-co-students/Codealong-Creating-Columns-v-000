@@ -46,7 +46,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+ 
 }
 
 /* Descendent Selector */
@@ -133,6 +133,14 @@ with a class of column -, we're going to give it a margin on the left side */
 
 /* SECTIONS */
 
+header {
+  position: fixed; 
+  top: 0;
+  left: 0%; 
+  width: 100%; 
+  background: rgba(204,	220,	226	,1);
+  z-index: 1; 
+}
 section {
     margin-bottom: 20px; 
     padding: 20px; 
