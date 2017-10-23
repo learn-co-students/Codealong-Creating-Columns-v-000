@@ -76,8 +76,6 @@ img, video, audio {
     max-width: 100%
 }
 
-
-
 /* LAYOUT */
 
 .wrapper {
@@ -121,6 +119,9 @@ with a class of column -, we're going to give it a margin on the left side */
 .first {
 	margin: 0%; 
 }
+
+/* SECTIONS */
+
 
 
 
