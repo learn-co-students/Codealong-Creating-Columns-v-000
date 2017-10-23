@@ -78,6 +78,13 @@ img, video, audio {
 
 /* LAYOUT */
 
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    
+}
+
 .wrapper {
 	width: 960px; 
 	margin: 0 auto;
@@ -122,7 +129,10 @@ with a class of column -, we're going to give it a margin on the left side */
 
 /* SECTIONS */
 
-
+section {
+    margin-bottom: 20px; 
+    padding: 20px; 
+}
 
 
 
