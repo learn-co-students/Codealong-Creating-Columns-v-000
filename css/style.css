@@ -96,11 +96,11 @@ figcaption {
 }
 
 /*spans across all of the space*/
-.col-3{
+.col-3 {
   background: #ccc;
 }
 
-.clearfix:: after {
+.clearfix::after {
   content: ".";
   display: block;
   clear: both;
@@ -117,5 +117,5 @@ figcaption {
 }
 /*this is to help "fix" the styling that was created with the above style*/
 .first {
-  left-margin: 0%;
+  margin-left: 0%;
 }
