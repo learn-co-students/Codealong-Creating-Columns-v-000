@@ -89,20 +89,20 @@ img, video, audio {
   line-height: 0;
 }
 
-.col-1 {
+.coll-1 {
   float: left;
   width: 32%;
   background: #ccc;
 }
-.col-2 {
+.coll-2 {
   float: left;
   width: 66%;
   background: red;
 }
-.col-3 {
+.coll-3 {
 background: #ccc;
 }
-[class*="col-"] {
+[class*="coll-"] {
   margin-left: 2%;
 }
 .first {
