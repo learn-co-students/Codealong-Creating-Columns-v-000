@@ -22,11 +22,10 @@ p { /* select all <p> */
 }
 
 figcaption {
-  /*font-weight: normal;
+  font-weight: normal;
   font-size: 0.75em;
   line-height: 1.5em;
-  font-family: Georgia, "New Times Roman", serif;*/
-  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
+  font-family: Georgia, "New Times Roman", serif;
   color: #777;
   text-align: right;
 }
@@ -74,8 +73,6 @@ figcaption {
 img, video, audio {
   max-width: 100%
 }
-
-
 *{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
