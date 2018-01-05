@@ -69,11 +69,13 @@ figcaption {
 #details a:active {
   color: red;
 }
+/*//////// LAYOUT //////////*/
+
 /*//////// MEDIA //////////*/
 img, video, audio {
   max-width: 100%
 }
-/*//////// LAYOUT //////////*/
+
 
 *{
   -webkit-box-sizing: border-box;
@@ -102,7 +104,7 @@ img, video, audio {
 .col-2 {
   float: left;
   width: 66%;
-  background: #ccc;
+  background: red;
 }
 .col-3 {
 background: #ccc;
@@ -141,4 +143,6 @@ section {
   width: 40px;
   height: 40px;
   background: yellow;
+}
+
 }
