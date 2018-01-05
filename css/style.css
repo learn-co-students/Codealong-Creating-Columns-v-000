@@ -44,7 +44,7 @@ figcaption {
 
 /* Descendent Selector */
 
-#logo h1 { /* selects <h1> if inside the id="logo" */
+#logo h1 {
   font-family: 'Clicker Script', cursive;
 }
 
@@ -52,7 +52,6 @@ figcaption {
   font-family: 'Elsie Swash Caps', cursive;
 }
 
-/* Psuedo Selector */
 
 #details a:link, #details a:visited {
   color: black;
@@ -67,9 +66,7 @@ figcaption {
 #details a:active {
   color: red;
 }
-/*//////// LAYOUT //////////*/
 
-/*//////// MEDIA //////////*/
 img, video, audio {
   max-width: 100%
 }
