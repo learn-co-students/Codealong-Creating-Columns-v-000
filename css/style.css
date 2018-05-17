@@ -1,72 +1,44 @@
-@import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
-@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
-
-/* This 
-is 
-a comment! */
-
-/* CSS Syntax:
-
-selector {
-  property: value;
-  property: value;
+/*###   genral   ###*/
+body {
+  margin: 0;
 }
 
-*/
-
-/* Type selector */
-
-p { /* select all <p> */
-  font-size: 1em; /* 16px, ?pt, 100%, 1em */
-  line-height: 1.5em;
+p {
+  font-size: 1em;
+  line-height: 1.5em
 }
 
-figcaption {
-  /*font-weight: normal;
-  font-size: 0.75em;
-  line-height: 1.5em;
-  font-family: Georgia, "New Times Roman", serif;*/
-  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
-  color: #777;
-  text-align: right;
+
+/*###   layout   ###*/
+
+.wraper{
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: blanchedalmond;
 }
 
-/* Class selector (applied to as many elements as you like) */
+.column{
+  /* width: 23.254%;  */
+  width: 23.5%;
+  /* width: 23%; */
+  /* width: 233px; */
+  /* min-width: 125px; */
+  padding: 0px;
 
-.milk-text { /* select elements with class="milk-text" */
-  font: bold 2.6em 'Elsie Swash Caps', cursive;
-  color: white;
-  text-shadow: 0 2px 3px #000;
+  float: left;
+  margin: 1%;
+  /* margin: 4px; */
+  background-color: #ccc;
 }
 
-/* ID selector (apply to one unique element per page) */
-
-#logo { /* select elements with id="logo" */
-  background: aqua;
+.column.column-first{
+  margin-left: 0;
 }
 
-/* Descendent Selector */
-
-#logo h1 { /* selects <h1> if inside the id="logo" */
-  font-family: 'Clicker Script', cursive;
+.column.column-last{
+  margin-right: 0;
 }
 
-#logo h2 {
-  font-family: 'Elsie Swash Caps', cursive;
-}
-
-/* Psuedo Selector */
-
-#details a:link, #details a:visited {
-  color: black;
-  text-decoration: none;
-}
-
-#details a:hover {
-  color: black;
-  text-decoration: underline;
-}
-
-#details a:active {
-  color: red;
+footer{
+  clear: both;
 }
