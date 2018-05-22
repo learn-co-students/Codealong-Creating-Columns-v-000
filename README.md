@@ -1,5 +1,8 @@
 # CSS Columns Code Along Exercise
 
+## Notes
+All actual work done on repository at Jirles/exceptional-realty. This repo was forked to 'pass' the lab only.
+
 ## Overview
 
 In this code along exercise we will add column structure to our page layouts.
