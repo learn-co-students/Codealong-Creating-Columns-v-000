@@ -14,7 +14,7 @@ cd exceptional-realty
 
 You'll want code along on a new branch, not `master`, so create a new branch called `columns`.
 
-<iframe  width="640" height="480" src="//www.youtube.com/embed/zZpAqtEXse0?rel=0&amp;controls=1&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
+<iframe  width="640" height="480" src="g//www.youtube.com/embed/zZpAqtEXse0?rel=0&amp;controls=1&amp;showinfo=1" frameborder="0" allowfullscreen></iframe>
 
 **Remember**, make sure to add, commit and push up the work you've done on your `columns` branch, then merge the work into your `master`, pushing up the `master` as well!
 
