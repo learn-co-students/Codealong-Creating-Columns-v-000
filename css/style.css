@@ -72,7 +72,78 @@ figcaption {
 }
 
 .wrapper {
-  width: 960 px;
+  width: 960px;
   margin: 0 auto;
+  background: grey;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+.col-1 {
+  float: left;
+  width: 32%;
   background: #eee;
+}
+
+.col-2{
+  float: left;
+  width: 66%;
+  background: #eee;
+}
+
+.col-3{
+  background: #eee;
+}
+
+[class*= "col-"]{
+  margin-left: 2%;
+  padding-left: 1%
+}
+
+.first {
+  margin-left: 0%;
+}
+
+img, video, audio {
+  max-width: 100%
+}
+
+*{
+  box-sizing: border-box;
+}
+
+section {
+  padding:20px;
+  margin-bottom: 20px;
+}
+
+#social{
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: yellow;
+}
+
+header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: aqua;
+  z-index: 1;
 }
