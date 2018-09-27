@@ -6,7 +6,7 @@
 
 
 img, video, audio {
-  max-width: 100;
+  max-width: 100%;
 }
 
 
@@ -37,7 +37,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+  background: white;
 }
 
 /* Descendent Selector */
@@ -70,7 +70,7 @@ figcaption {
 
 * {
   box-sizing: border-box;
-  -webkit-box-sizing:border-box;
+  -webkit-box-sizing: border-box;
   -mox-box-sizing: border-box;
 }
 
@@ -92,7 +92,6 @@ figcaption {
     float: left;
     width: 66%;
     background: #ccc;
-
 }
 
 .col-3 {
@@ -135,7 +134,7 @@ section {
 
 /*social*/
 
-#social secion{
+#social{
   position: fixed;
   top: 200px;
   right: 20px;
