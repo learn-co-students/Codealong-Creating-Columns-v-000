@@ -1,17 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
-
 selector {
   property: value;
   property: value;
 }
-
 */
 
 /* Type selector */
@@ -42,7 +40,6 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
 }
 
 /* Descendent Selector */
@@ -70,44 +67,49 @@ figcaption {
 #details a:active {
   color: red;
 }
-/*///// MEDIA /////*/
+
+/* MEDIA */
+
 img, video, audio {
   max-width: 100%;
 }
 
-/*///// LAYOUT /////*/
+/* LAYOUT */
 
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+* {
+  box-sizing: border-box; /* includes both padding and border in width */
+  -webkit-box-sizing: border-box; /* Safari */
+  -moz-box-sizing: border-box;  /* Firefox */
 }
 
 .wrapper {
-  width: 1080px;
+  width: 960px;
   margin: 0 auto;
+  background: #eee;
 }
 
-/* (96 - 4) % 3 */
+/* span 1/3 of the space, 2% margins */
 .col-1 {
   float: left;
   width: 32%;
-  background: #ccc;
+  background: #CCC;
 }
 
-/* (32 * 2) + 2 */
+/* span 2/3 of the space */
 .col-2 {
   float: left;
   width: 66%;
-  background: #ccc;
+  background: #CCC;
 }
 
+/* span entire space */
 .col-3 {
-  background: #ccc;
+  background: #CCC;
+
 }
 
 .clearfix:after {
-  content: "."
+  content: ".";
   display: block;
   clear: both;
   visibility: hidden;
@@ -123,14 +125,15 @@ img, video, audio {
   margin-left: 0%;
 }
 
-/*///// SECTIONS ///// */
+
+/* SECTIONS */
 
 header {
-  postition; fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #ffff;
+  background: #fff;
   z-index: 1;
 }
 
@@ -139,19 +142,20 @@ section {
   margin-bottom: 20px;
 }
 
-/*///// SOCIAL /////*/
+
+/* SOCIAL */
 
 #social {
   position: fixed;
   top: 200px;
   right: 20px;
-  width: 40px;
+  background: yellow;
+  width: 100px;
   z-index: 1;
 }
 
 #social a {
-  display: block;
+  display: block; /* stack vertically */
   width: 40px;
   height: 40px;
-  background: yellow;
 }
