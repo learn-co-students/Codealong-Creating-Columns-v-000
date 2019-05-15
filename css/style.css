@@ -42,7 +42,6 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
 }
 
 /* Descendent Selector */
@@ -69,4 +68,90 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+/* ////////// MEDIA ////////// */
+img, video, audio {
+  max-width: 100%
+}
+
+/* ////////// LAYOUT ////////// */
+
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.col-1 {
+  float: left;
+  width: 32%; /* We will have 2% margin between the columns. Since we have 3 columns, we find the column width by 100-(2+2)=96 96/3=32 */
+  background: #ccc
+}
+
+.col-2 {
+  float: left;
+  width: 66%; /* We will have 2% margin between the columns. Col-1 is 32%, so we take 100-32-2=66 */
+  background: #ccc
+}
+
+.col-3 {
+  /* Block elements default to 100%, so no need to set width. We will not have elements to the right of this, so no need to float. */
+  background: #ccc
+}
+
+.clearfix:after {
+  content: “.”; /*The hack is that this class will go in after all the children and add a little period (or some small content) at the bottom of the parent.  This way the parent “content” ends after all the children, and therefore the parent resizes to its content size (and all the children are within it).*/
+  display: block; /* Take up all the horizontal space */
+  clear: both; /* Clear past the height of any floating children above it */
+  visibility: hidden; /* makes the period invisible */
+  height: 0; /* makes the period not take up any height */
+  line-height: 0; /* makes the period not take up any height  */
+}
+
+[class*="col-"] { /*Anything class "col-" in the class name will have these styles */
+  margin-left: 2%;
+}
+
+.first { /* Added this class so that I can apply it to the very first column. We don't want the first col to have a margin b/c that will throw off the centering of the page and mess up the widths we set previously. */
+  margin-left: 0% 
+}
+
+/* ////////// SECTIONS ////////// */
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+}
+
+footer {
+  clear:  both;
+}
+
+/* ////////// SOCIAL ////////// */
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
