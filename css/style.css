@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -22,11 +22,10 @@ p { /* select all <p> */
 }
 
 figcaption {
-  /*font-weight: normal;
+  font-weight: normal;
   font-size: 0.75em;
-  line-height: 1.5em;
-  font-family: Georgia, "New Times Roman", serif;*/
-  font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
+  line-height: 1.6em;
+  font-family: Georgia, "New Times Roman", serif;
   color: #777;
   text-align: right;
 }
@@ -41,13 +40,11 @@ figcaption {
 
 /* ID selector (apply to one unique element per page) */
 
-#logo { /* select elements with id="logo" */
-  background: aqua;
-}
+
 
 /* Descendent Selector */
 
-#logo h1 { /* selects <h1> if inside the id="logo" */
+#logo h1 {
   font-family: 'Clicker Script', cursive;
 }
 
@@ -55,7 +52,6 @@ figcaption {
   font-family: 'Elsie Swash Caps', cursive;
 }
 
-/* Psuedo Selector */
 
 #details a:link, #details a:visited {
   color: black;
@@ -69,4 +65,75 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+img, video, audio {
+  max-width: 100%
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapped {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+.coll-1 {
+  float: left;
+  width: 32%;
+  background: #ccc;
+}
+.coll-2 {
+  float: left;
+  width: 66%;
+  background: red;
+}
+.coll-3 {
+background: #ccc;
+}
+[class*="coll-"] {
+  margin-left: 2%;
+}
+.first {
+  margin-left: 0%;
+}
+/*//////// SECTIONS //////////*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
