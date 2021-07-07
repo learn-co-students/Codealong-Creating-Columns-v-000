@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+
 }
 
 /* Descendent Selector */
@@ -69,4 +69,94 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/* STYLING MEDIA */
+
+img, video, audio {
+  max-width: 100%; /* This allows images, media, etc. to be fluid within the confines of their parent, which here means the column they are in */
+}
+
+/* STYLING LAYOUT */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; /* this fixes how everything got messed up when we added padding below. it changes it to internet explorer box model */
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+
+  }
+
+.col-1 {
+  float: left;
+  width: 32%;
+  background: #ccc;
+}
+
+.col-2 {
+  float: left;
+  width: 66%;
+  background: #ccc;
+}
+
+.col-3 {
+  /* He wants this to be 100%.  don't need to add width or float b/c it's a block level lement and will take up 100% anyway */
+  background: #ccc;
+}
+
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both; /*ie, clear past the height of anything floating above it */
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/*to apply margin to all of the columns at once, you can use a trick using an attribute selector */
+
+[class*="col-"] {
+  margin-left: 2%;
+}
+
+.first {
+  margin-left: 0%; /* this is needed to make sure any column on the far left does not have extra margin */
+}
+
+/* SECTION LAYOUT */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* SOCIAL STYLING */
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
