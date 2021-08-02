@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+
 }
 
 /* Descendent Selector */
@@ -69,4 +69,142 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/*////// media //////
+since the media inside of the columns is set to a fluid amount and because the
+columns themselves are a fluid amount--we can adjust hte width of the wrapper
+only! */
+
+img, video, audio {
+  max-width: 100%
+}
+
+
+/*///// layout /////*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+/* 
+create a few calssess for diff size columns.
+some grid systems give you many different sized columns
+we will only have at most a 3 column structure.
+we can do it so that the columns only span 1/3 of the space and you 
+can have three of those
+or one that spans 2/3rds of the space and that could be paired up 
+with a column that spans the last 3rd.
+or have one that spans across all three.
+col1 will span one third
+col2 will span two thirds
+column 3 will span all of the space.
+anytime you need a column structure that exists side by seide with others
+you have put them set to float.
+you can also set them with a width.
+you know you want to have roughly 2% of margin so theyre not up against 
+each other
+so you can take 100% - 2% for each column and that will give the 
+width of the space in between.
+if you have 3 columns, you want to have space between the first and second column
+and space between second and third column.
+two different margins ad up to 4%
+100-4 = 96% left over
+96/3 = 32% wide columns with 2% of margin in between them is permissible.
+we want column 2 to span two thirds so
+32 + 32 = 64% and then add back on the margin.
+64 + 2 = 66% since the 2% is being absorbed.
+66+32+2 = 100% inside of the wrapper
+
+for the third column it will have a width of 100% but since
+its a block level element, if we dont specify a width it will take up
+all of the sapce automatically. so no float and no width needed.
+it wont have anything beside it so no float.
+
+to add the margins in betwen... an attribute selector is used
+we'll say any element that has a class where somewhere inside of the 
+class name it has the name column dash... style it so margin left is 2%
+
+*/
+.col-1 {
+  float: left;
+  width: 32%;
+  background: #ccc
+}
+
+.col-2 {
+  float: left;
+  width: 66%;
+  background: #ccc
+}
+
+.col-3 {
+  background: #ccc;
+}
+/*whenever you have floating children, theres an issue where the parent
+will collapse. so now we can apply the clearfix class to any parents
+are collapsing--*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+[class*="col-"] {
+  margin-left: 2%;
+}
+
+.first {
+  margin-left: 0%;
+}
+
+/*//////Sections///////
+but when we added the padding onto the elements, we increased the width
+of those elements and now the sizing isnt working out. company news sectio
+is supposed to be next to the promo video... cbox model is being added
+as additional width and its breaking our layout. so we can set the 
+box sizing attribute to the layout. universal selector and tell it that
+the box sizing should be set to border  box so it includes padding
+and border into the width.
+prefix to older versions of safari and mozilla firefox with those prefixes.
+*/
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*/////social//////*/
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
