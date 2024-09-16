@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+  /*background: aqua; */
 }
 
 /* Descendent Selector */
@@ -69,4 +69,96 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/*///// MEDIA //////*/
+
+img, video, audio { /* this allows them to be fluid in size, but stay within their parent container. */
+	max-width: 100%;
+}
+
+/*///// LAYOUT //////*/
+
+* { /* this fixes the w3c box model problem of not including padding when calculating width. */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	/* background: #eee; */
+}
+
+.col-1 {
+	/* anytime we have columns that need to exist with other columns, they have to be set to float. */
+	float: left;
+	width: 32%;
+	/* background: #ccc; */
+
+}
+
+.col-2 {
+	float: left;
+	width: 66%;
+	/* background: #ccc; */
+
+}
+
+.col-3 {
+	/* background: #ccc; */
+
+}
+
+.clearfix:after { /* to fix display of parent elements with floating children. */
+	content: ".";
+	display: block;
+	clear: both; /* clear past the height of anything floating above it. */
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+[class*="col-"] { /* any element that has a class, and the class contains "col-" apply these attributes. */
+	margin-left: 2%;
+}
+
+.first {  /* this eliminates left margin on any column with class "first". This helps our first details
+	div be better aligned in the page and negates the left margin applied to any class with "col-" in it. */
+	margin-left: 0%;
+}
+
+/*///// SECTIONS //////*/
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 1;
+}
+
+section { /* this effects the sizing because w3c box model does not include padding in the width
+	  fix it using the border-box method at the top of the layout section. */
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+/*///// SOCIAL //////*/
+
+#social {
+	position: fixed;
+	top: 200px;
+	right: 20px;
+	width: 40px;
+	z-index: 1;
+}
+
+#social a { /* to effect the links within the social ID */
+	display: block; /* so they stack up one under the other. */
+	width: 40px;
+	height: 40px;
+	/* background: yellow; */
 }
