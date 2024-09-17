@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+  /*background: aqua;*/
 }
 
 /* Descendent Selector */
@@ -69,4 +69,100 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/*MEDIA*/
+
+img, video, audio{
+  max-width: 100%;
+  /*always max of container*/
+}
+
+
+/*SECTIONS*/
+
+section{
+  padding: 20px;
+  margin-bottom: 20px;  
+}
+
+header{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background: white;
+  z-index: 1;
+}
+/*LAYOUT*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*centering all wrappers*/
+.wrapper{
+  width:960px;
+  margin: 0 auto;
+  /*background: #eee;*/
+}
+
+/*1/3 space*/
+/*we'll have a 2 * 2% = 4% margin, which cannot be accounted for within div using %*/
+.col-1{
+float:left;
+width:32%;
+}
+
+/*2/3 space*/
+/*only 2% margin*/
+.col-2{
+float:left;
+width:66%;
+background: #ccc;
+}
+
+/*whole width*/
+.col-3{
+background: #ccc;
+}
+
+/*Any element with class attribute having "col-" in it*/
+[class*="col-"]{
+  margin-left: 2%;
+background: #ccc;
+  /*leftmost columng?*/
+}
+
+/*first column hack not to have left margin*/
+.first{
+  margin-left:0%;
+}
+
+/*apply to any wrapper that will collapse due to floating children*/
+.clearfix:after{
+  content: ".";
+  display: block;
+  clear:both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/*SOCIAL*/
+
+#social{
+  position: fixed;
+  top:200px;
+  right: 20px;
+  width:40px;
+  z-index: 1;
+}
+
+#social a{
+  display: block;
+  width:40px;
+  height:40px;
+  background: yellow;
 }
