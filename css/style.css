@@ -1,8 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:400,900);
 @import url(http://fonts.googleapis.com/css?family=Clicker+Script);
 
-/* This 
-is 
+/* This
+is
 a comment! */
 
 /* CSS Syntax:
@@ -42,7 +42,7 @@ figcaption {
 /* ID selector (apply to one unique element per page) */
 
 #logo { /* select elements with id="logo" */
-  background: aqua;
+
 }
 
 /* Descendent Selector */
@@ -69,4 +69,105 @@ figcaption {
 
 #details a:active {
   color: red;
+}
+
+/*//////// MEDIA ////////*/
+
+img, video, audio { /* Tells all images, videos and audio to display at 100% of their parent. */
+  max-width: 100%
+}
+
+/*//////// LAYOUT ////////*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; /* includes padding and border for IE box model */
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; /* No margin for top or bottom, "auto" for left and right. The "auto" value
+  will automatically center the element when you resize the screen. */
+}
+
+.wrapper-1 {
+  width: 960px;
+  margin: 0 auto; /* No margin for top or bottom, "auto" for left and right. The "auto" value
+  will automatically center the element when you resize the screen. */
+  background: #aaa;
+}
+
+.col-1 {
+  float: left;
+  width: 32%; /* If you have 3 columns and want a 2% margin between them, then add 2+2 = 4%.
+  then subtract that from 100% to get 96%. Since you have 3 columns, divide 96/3 = 32%. */
+  background: #ccc;
+}
+
+/* The wrapper width = 960px. Column-1 and Column-2 or 32+66 = 98% + 2% margin = 100% of
+wrapper width. When you adjust the size of the wrapper, the elements will adjust in proportion
+because they are set at a percentage.  So if you adjust the wrapper width from 960px to 1080px
+then the rest of the layout will adjust to the new size. */
+
+.col-2 {
+  float: left;
+  width: 66%; /* This column will take up 2/3 of the screen, so 32+32 = 64%. But we want to
+  add 2% margin since we will have only 2 columns, so add 64+2 = 66%. */
+  background: #ccc;
+}
+
+.col-3 {
+  background: #ccc;
+}
+
+.clearfix:after { /* Add this selector to wrappers with floating children. */
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+[class*="col-"] { /* This selector applies 2% margin to all class selectors where name contains
+"col-". */
+  margin-left: 2%;
+}
+
+.first {
+  margin-left: 0%;
+}
+
+/*//////// SECTIONS ////////*/
+
+header { /* This will keep the position fixed when you scroll. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/*//////// SOCIAL ////////*/
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: yellow;
 }
